@@ -392,7 +392,7 @@ VertexOutputForwardBase vertForwardBase (VertexInput v)
             o.posWorld = posWorld.xyz;
         #endif
     #endif
-    o.pos = UnityObjectToClipPosAlt(v.vertex);
+    o.pos = UnityObjectToClipPosAlt(v.vertex.xyz);
 
     o.tex = TexCoords(v);
     o.eyeVec.xyz = NormalizePerVertexNormal(posWorld.xyz - _WorldSpaceCameraPos);
@@ -483,7 +483,7 @@ VertexOutputForwardAdd vertForwardAdd (VertexInput v)
     UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o);
 
     float4 posWorld = mul(unity_ObjectToWorld, v.vertex);
-    o.pos = UnityObjectToClipPosAlt(v.vertex);
+    o.pos = UnityObjectToClipPosAlt(v.vertex.xyz);
 
     o.tex = TexCoords(v);
     o.eyeVec.xyz = NormalizePerVertexNormal(posWorld.xyz - _WorldSpaceCameraPos);
@@ -583,7 +583,7 @@ VertexOutputDeferred vertDeferred (VertexInput v)
             o.posWorld = posWorld.xyz;
         #endif
     #endif
-    o.pos = UnityObjectToClipPosAlt(v.vertex);
+    o.pos = UnityObjectToClipPosAlt(v.vertex.xyz);
 
     o.tex = TexCoords(v);
     o.eyeVec = NormalizePerVertexNormal(posWorld.xyz - _WorldSpaceCameraPos);

@@ -160,7 +160,7 @@ Shader "AntiShake/Standard (Specular setup)"
             #pragma vertex vertShadowCaster
             #pragma fragment fragShadowCaster
 
-            #include "UnityStandardShadow.cginc"
+            #include "UnityStandardShadowAlt.cginc"
 
             ENDCG
         }
@@ -322,7 +322,7 @@ Shader "AntiShake/Standard (Specular setup)"
             #pragma vertex vertShadowCaster
             #pragma fragment fragShadowCaster
 
-            #include "UnityStandardShadow.cginc"
+            #include "UnityStandardShadowAlt.cginc"
 
             ENDCG
         }

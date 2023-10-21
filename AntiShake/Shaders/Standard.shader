@@ -162,7 +162,7 @@ Shader "AntiShake/Standard"
             #pragma vertex vertShadowCaster
             #pragma fragment fragShadowCaster
 
-            #include "UnityStandardShadow.cginc"
+            #include "UnityStandardShadowAlt.cginc"
 
             ENDCG
         }
@@ -324,7 +324,7 @@ Shader "AntiShake/Standard"
             #pragma vertex vertShadowCaster
             #pragma fragment fragShadowCaster
 
-            #include "UnityStandardShadow.cginc"
+            #include "UnityStandardShadowAlt.cginc"
 
             ENDCG
         }

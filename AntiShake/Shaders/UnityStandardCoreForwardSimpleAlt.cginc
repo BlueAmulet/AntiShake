@@ -90,7 +90,7 @@ VertexOutputBaseSimple vertForwardBaseSimple (VertexInput v)
     UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o);
 
     float4 posWorld = mul(unity_ObjectToWorld, v.vertex);
-    o.pos = UnityObjectToClipPosAlt(v.vertex);
+    o.pos = UnityObjectToClipPosAlt(v.vertex.xyz);
     o.tex = TexCoords(v);
 
     half3 eyeVec = normalize(posWorld.xyz - _WorldSpaceCameraPos);
@@ -270,7 +270,7 @@ VertexOutputForwardAddSimple vertForwardAddSimple (VertexInput v)
     UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o);
 
     float4 posWorld = mul(unity_ObjectToWorld, v.vertex);
-    o.pos = UnityObjectToClipPosAlt(v.vertex);
+    o.pos = UnityObjectToClipPosAlt(v.vertex.xyz);
     o.tex = TexCoords(v);
     o.posWorld = posWorld.xyz;
 
